@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'bookmark_page.dart';
 import 'recipe_page.dart';
+import 'inventory_page.dart';
 
 class HomeShellPage extends StatefulWidget {
   const HomeShellPage({super.key});
@@ -12,15 +13,17 @@ class HomeShellPage extends StatefulWidget {
 class _HomeShellPageState extends State<HomeShellPage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = const [
+  final List<Widget> _pages = [
     RecipePage(),
     BookmarkPage(),
+    InventoryPage(),
     Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
   ];
 
   final List<String> _titles = const [
     'OlahRasa - Recipes',
     'OlahRasa - Bookmark',
+    'OlahRasa - Inventory',
     'OlahRasa - Modul Lain',
   ];
 
@@ -33,6 +36,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
@@ -42,10 +46,15 @@ class _HomeShellPageState extends State<HomeShellPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.restaurant_menu),
             label: 'Recipes',
+            
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
             label: 'Bookmark',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.inventory),
+            label: 'Inventory',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view),

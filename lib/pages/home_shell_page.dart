@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'bookmark_page.dart';
 import 'recipe_page.dart';
 import 'inventory_page.dart';
 import 'tracker_page.dart';
+import 'authentication_page.dart';
 
 class HomeShellPage extends StatefulWidget {
   const HomeShellPage({super.key});
@@ -19,7 +21,10 @@ class _HomeShellPageState extends State<HomeShellPage> {
     BookmarkPage(),
     InventoryPage(),
     TrackerPage(),
-    Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
+    Center(
+      child: Text('Halaman Modul Lain (Dummy / Placeholder)'),
+    ),
+    const AuthenticationPage(),
   ];
 
   final List<String> _titles = const [
@@ -28,6 +33,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
     'OlahRasa - Inventory',
     'OlahRasa - Tracker',
     'OlahRasa - Modul Lain',
+    'OlahRasa - Authentication',
   ];
 
   @override
@@ -59,12 +65,16 @@ class _HomeShellPageState extends State<HomeShellPage> {
             label: 'Inventory',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.inventory),
+            icon: Icon(Icons.track_changes),
             label: 'Tracker',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view),
             label: 'Lainnya',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
           ),
         ],
       ),

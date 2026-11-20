@@ -4,7 +4,10 @@ import 'bookmark_page.dart';
 import 'recipe_page.dart';
 import 'inventory_page.dart';
 import 'tracker_page.dart';
+<<<<<<< HEAD
 import 'authentication_page.dart';
+=======
+>>>>>>> origin/main
 
 class HomeShellPage extends StatefulWidget {
   const HomeShellPage({super.key});
@@ -21,10 +24,14 @@ class _HomeShellPageState extends State<HomeShellPage> {
     BookmarkPage(),
     InventoryPage(),
     TrackerPage(),
+<<<<<<< HEAD
     Center(
       child: Text('Halaman Modul Lain (Dummy / Placeholder)'),
     ),
     const AuthenticationPage(),
+=======
+    Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
+>>>>>>> origin/main
   ];
 
   final List<String> _titles = const [
@@ -65,7 +72,11 @@ class _HomeShellPageState extends State<HomeShellPage> {
             label: 'Inventory',
           ),
           BottomNavigationBarItem(
+<<<<<<< HEAD
             icon: Icon(Icons.track_changes),
+=======
+            icon: Icon(Icons.inventory),
+>>>>>>> origin/main
             label: 'Tracker',
           ),
           BottomNavigationBarItem(

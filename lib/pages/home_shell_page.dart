@@ -46,7 +46,6 @@ class _HomeShellPageState extends State<HomeShellPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.restaurant_menu),
             label: 'Recipes',
-            
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),

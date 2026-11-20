@@ -1,5 +1,5 @@
-// lib/pages/home_shell_page.dart
 import 'package:flutter/material.dart';
+import 'bookmark_page.dart';
 import 'recipe_page.dart';
 
 class HomeShellPage extends StatefulWidget {
@@ -14,11 +14,13 @@ class _HomeShellPageState extends State<HomeShellPage> {
 
   final List<Widget> _pages = const [
     RecipePage(),
+    BookmarkPage(),
     Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
   ];
 
   final List<String> _titles = const [
     'OlahRasa - Recipes',
+    'OlahRasa - Bookmark',
     'OlahRasa - Modul Lain',
   ];
 
@@ -40,6 +42,10 @@ class _HomeShellPageState extends State<HomeShellPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.restaurant_menu),
             label: 'Recipes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bookmark),
+            label: 'Bookmark',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view),

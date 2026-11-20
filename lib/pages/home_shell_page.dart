@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'bookmark_page.dart';
 import 'recipe_page.dart';
 import 'inventory_page.dart';
+import 'authentication_page.dart';
 
 class HomeShellPage extends StatefulWidget {
   const HomeShellPage({super.key});
@@ -18,6 +20,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
     BookmarkPage(),
     InventoryPage(),
     Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
+    const AuthenticationPage(),
   ];
 
   final List<String> _titles = const [
@@ -25,6 +28,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
     'OlahRasa - Bookmark',
     'OlahRasa - Inventory',
     'OlahRasa - Modul Lain',
+    'OlahRasa - Authentication',
   ];
 
   @override
@@ -58,6 +62,10 @@ class _HomeShellPageState extends State<HomeShellPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view),
             label: 'Lainnya',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
           ),
         ],
       ),

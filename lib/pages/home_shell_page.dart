@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'bookmark_page.dart';
 import 'recipe_page.dart';
 import 'inventory_page.dart';
+import 'tracker_page.dart';
 
 class HomeShellPage extends StatefulWidget {
   const HomeShellPage({super.key});
@@ -17,6 +18,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
     RecipePage(),
     BookmarkPage(),
     InventoryPage(),
+    TrackerPage(),
     Center(child: Text('Halaman Modul Lain (Dummy / Placeholder)')),
   ];
 
@@ -24,6 +26,7 @@ class _HomeShellPageState extends State<HomeShellPage> {
     'OlahRasa - Recipes',
     'OlahRasa - Bookmark',
     'OlahRasa - Inventory',
+    'OlahRasa - Tracker',
     'OlahRasa - Modul Lain',
   ];
 
@@ -54,6 +57,10 @@ class _HomeShellPageState extends State<HomeShellPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.inventory),
             label: 'Inventory',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.inventory),
+            label: 'Tracker',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.grid_view),
